@@ -435,6 +435,35 @@ Precondition: Recruiter knows the applicant contact ID
 
 *{More to be added}*
 
+Use case: List out all job postings in my database
+
+Precondition: Recruiter has previously added job postings
+
+MSS
+
+1. Recruiter enters command to list all job postings.
+2. ReCLIne gives confirmation and displays all job posting.
+
+   Use case ends.
+
+Extensions
+
+* 1a. There are no job postings in the database
+
+    * 1a1. ReCLIne shows message that stating that there are no job postings yet
+    * 1a2. Recruiter adds job posting (if applicable, otherwise stop attempting to list)
+
+      Steps 1a1-1a2 are repeated until recruiter adds a job posting. Use case resumes from step 2.
+
+* 1b. Recruiter enters unnecessary/invalid argument
+
+    * 1b1. ReCLIne shows an error message saying that argument is invalid.
+    * 1b2. Recruiter enters new list command without argument.
+
+      Steps 1b1-1b2 are repeated until recruiter removes invalid argument. Use case resumes from step 2.
+
+*{More to be added}*
+
 
 ### Non-Functional Requirements
 
