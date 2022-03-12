@@ -79,7 +79,7 @@ Shows a message explaning how to access the help page.
 
 Format: `help`
 
-### Adding a Job: `job add`
+### Adding a Job: `job add` [coming soon]
 Adds a job attribute
 
 Format: `job add [ID*] ed/[EDUCATION] l/[LOCATION] s/[SALARY] sp/[SPECIALISATION] d/[DURATION]`
@@ -118,7 +118,7 @@ Example:
 * Add details to Job ID 32, that location of job is at OCBC, salary is 5000 a month, looking for someone with
     specialisation in Accountancy and a contract of 3 years.
 
-### Deleting a Job attribute: `job delete`
+### Deleting a Job attribute: `job delete` [coming soon]
 
 * Deletes attributes from the specified job id. Command should include at least 1 flag.
 
@@ -180,7 +180,7 @@ Examples:
 `applicant add 112 j/1 in/220226`
 - Adds a job id attribute and interview date attribute to the applicant with ID 112.
 
-### Delete Applicant attribute: `applicant delete`
+### Delete Applicant attribute: `applicant delete` [coming soon]
 
 Delete attributes of an applicant corresponding to the flags.
 
@@ -314,7 +314,7 @@ interview date-28 May 2022 at 7:00pm, Job ID-4 to the applicant list in the addr
 * Adds an applicant with name-Cheryl Tan, phone number-81728194 to the
 applicant list in the address book.
 
-### Adding a Job to the JobList: `list add job`
+### Adding a Job to the JobList: `list add job` [coming soon]
 
 Adds a job to the job list in the address book.
 
@@ -357,7 +357,7 @@ job list in the address book
 
 * Adds a job with name-Admin Administrator, number of vacancies-5, employer ID-2 to the job list in the address book.
 
-### Adding an Employer to the EmployerList: `list add employer`
+### Adding an Employer to the EmployerList: `list add employer` [coming soon]
 
 Adds an employer to the employer list in the address book.
 
@@ -390,21 +390,21 @@ company name-Facebook to the employer list in the address book.
 
 Deletes the specified applicant from the applicant list in the address book.
 
-Format: `list delete applicant [ID*]`
+Format: `deleteapplicant [Index*]`
 
-`[ID*]`: Unique ID of the applicant. `ID` must be a positive integer 1,2,3,...
+`[Index*]`: Index of the applicant on the displayed applicants' list. `Index` must be a positive integer 1,2,3,...
 
 Examples:
 
-`list delete 4`
+`deleteapplicant 4`
 
-* Deletes an applicant with ID 4 from the applicant list in the address book.
+* Deletes an applicant at index 4 in the address book.
 
-`list delete 5`
+`deleteapplicant 5`
 
-* Deletes an applicant with ID 5 from the applicant list in the address book.
+* Deletes an applicant at index 5 in the address book.
 
-### Deleting a Job : `list delete job`
+### Deleting a Job : `list delete job` [coming soon]
 
 Deletes the specified job from the job list in the address book.
 
@@ -422,7 +422,7 @@ Examples:
 
 * Deletes a job with ID 5 from the job list in the address book.
 
-### Deleting an employer: `list delete employer`
+### Deleting an employer: `list delete employer` [coming soon]
 
 Deletes the specified employer from the employer list in the address book.
 
