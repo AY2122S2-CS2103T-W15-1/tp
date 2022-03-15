@@ -16,27 +16,55 @@ public class JobId {
      */
     public final Integer jobId;
 
+    private final boolean isInit;
+
     /**
      * Constructs a Job ID
      *
      * @param jobId ID of job applicant is applying for
      */
-    public JobId(int jobId) {
+    public JobId(String jobId) {
         requireNonNull(jobId);
-        checkArgument(isValidId(jobId), MESSAGE_CONSTRAINTS);
-        this.jobId = jobId;
+        checkArgument(isValidJobId(jobId), MESSAGE_CONSTRAINTS);
+        if (jobId.equals("PENDING")) {
+            isInit = false;
+            this.jobId = 0;
+        } else {
+            isInit = true;
+            this.jobId = Integer.parseInt(jobId);
+        }
+    }
+
+    /**
+     * Constructor to create JobId that is not initialized
+     */
+    public JobId() {
+        isInit = false;
+        this.jobId = 10;
     }
 
     /**
      * Returns true if the input integer is a valid Id.
      */
-    public static boolean isValidId(int test) {
-        return test > 0;
+    public static boolean isValidJobId(String test) {
+        if (test.equals("PENDING")) {
+            return true;
+        }
+        try {
+            int testing = Integer.parseInt(test);
+            return testing > 0;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 
     @Override
     public String toString() {
-        return "Job #" + this.jobId;
+        if (isInit) {
+            return this.jobId.toString();
+        } else {
+            return "PENDING";
+        }
     }
 
     @Override
